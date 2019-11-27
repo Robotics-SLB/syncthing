@@ -739,11 +739,11 @@ func ensureDir(dir string, mode fs.FileMode) error {
 		// fail (like loading or creating the config...).
 		currentMode := fi.Mode() & 0777
 		if currentMode != mode {
-			err := fs.Chmod(".", mode)
+			//err := fs.Chmod(".", mode)
 			// This can fail on crappy filesystems, nothing we can do about it.
-			if err != nil {
-				l.Warnln(err)
-			}
+			//if err != nil {
+			//	l.Warnln(err)
+			//}
 		}
 	}
 	return nil
